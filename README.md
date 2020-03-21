@@ -1,2 +1,2 @@
-# request-conut-resetor
-The request count resetor for K-COVID19API
+# api-request-conut-resetor
+The request count resetor for Dropper API service
