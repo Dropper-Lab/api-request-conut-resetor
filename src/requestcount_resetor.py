@@ -29,7 +29,7 @@ from logging.handlers import RotatingFileHandler
 
 import time
 
-import pymysql 
+import pymysql
 import mysql_requestcount_property
 
 logging.Formatter.converter = time.gmtime
@@ -41,7 +41,9 @@ logger.setLevel(logging.INFO)
 logger.info("every package loaded and start logging")
 
 if __name__ == '__main__':
-    connection = pymysql.connect(host=mysql_requestcount_property.hostname, user=mysql_requestcount_property.user, password=mysql_requestcount_property.password, db=mysql_requestcount_property.database, charset=mysql_requestcount_property.charset)
+    connection = pymysql.connect(host=mysql_requestcount_property.hostname, user=mysql_requestcount_property.user,
+                                 password=mysql_requestcount_property.password, db=mysql_requestcount_property.database,
+                                 charset=mysql_requestcount_property.charset)
     cursor = connection.cursor(pymysql.cursors.DictCursor)
     logger.info("database connection opened")
 
